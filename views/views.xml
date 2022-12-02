@@ -15,9 +15,13 @@
         <xpath expr="//div[hasclass('clearfix')]" position="before">
             <div t-attf-class="form-group #{error.get('date_of_birth') and 'o_has_error' or ''} col-xl-6">
                 <label class="col-form-label" for="">Addhar No.</label>
-                <input type="text" name="addhar_no"
-                       t-attf-class="form-control #{error.get('addhar_no') and 'is-invalid' or ''}"
-                       t-att-value="addhar_no or partner.addhar_no"/>
+                <input type="text"
+                        name="addhar_no"
+                        pattern="^[2-9]{1}[0-9]{3}\s[0-9]{4}\s[0-9]{4}$"
+                        title="98xx 07xx x60x"
+                        placeholder="12 digit UIDAI number Ex.98xx 07xx x60x"
+                        t-attf-class="form-control #{error.get('addhar_no') and 'is-invalid' or ''}"
+                        t-att-value="addhar_no or partner.addhar_no"/>
             </div>
         </xpath>
     </template>
