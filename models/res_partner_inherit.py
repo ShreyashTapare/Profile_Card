@@ -2,8 +2,9 @@
 
 from odoo import models, fields, api
 
+#Inherited Module From 'res.partner' 
 
-class portal__profile(models.Model):
+class portal_profile(models.Model):
     _name = 'res.partner'
     _inherit = "res.partner"
     _description = 'New Additional Fields'

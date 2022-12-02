@@ -3,8 +3,8 @@ from odoo.http import route
 # from addons.portal.controllers.portal import CustomerPortal
 from odoo.addons.portal.controllers.portal import CustomerPortal
 
-print("itis =========================================================")
 
+#Inherited Controller From 'my/account' 
 class Inherted1Portal (CustomerPortal):
 
     @route(['/my/account'], type='http', auth='user', website=True)
