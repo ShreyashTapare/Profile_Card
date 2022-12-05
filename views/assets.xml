@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <template id="Portal_Profile_asset" name="My style" inherit_id="web.assets_frontend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/scss" href="/portal_profile_1/static/src/css/base.css" />
+                <script type="text/javascript" src="/portal_profile_1/static/src/js/base.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

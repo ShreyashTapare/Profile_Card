@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Portal_Profile",
+    'name': "Portal_Profile_1",
 
     'summary': """
         Just Basic Module Which Adds extra Detail Field In Profile Section.
@@ -26,9 +26,10 @@
 
     # always loaded
     'data': [
-        'views/views.xml'
-
+        'views/views.xml',
+        'views/assets.xml',
     ],
+    'sequence': -100 ,
 
     'license': 'LGPL-3',
 }

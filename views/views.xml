@@ -4,7 +4,7 @@
     <template inherit_id="portal.portal_layout" id="portal_dob_field">
         <xpath expr="//div[hasclass('o_portal_my_details')]" position="after">
             <div>
-                <h6 style="margin-top:10px;">
+                <h6 style="margin-top:10px;" id = "addhar_text">
                     <b>Addhar-No :</b>  <t t-esc="user_id.partner_id.addhar_no "/>
                 </h6>
             </div>
