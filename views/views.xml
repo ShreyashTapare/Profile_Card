@@ -2,11 +2,25 @@
 <odoo>
 
     <template inherit_id="portal.portal_layout" id="portal_dob_field">
-        <xpath expr="//div[hasclass('o_portal_my_details')]" position="after">
-            <div>
-                <h6 style="margin-top:10px;" id = "addhar_text">
-                    <b>Addhar-No :</b>  <t t-esc="user_id.partner_id.addhar_no "/>
-                </h6>
+        <xpath expr="//div[hasclass('o_portal_my_details')]" position="replace">
+            <div id = "Portal_detail_Bg" >
+                
+                <div class="Portal_detail_text">
+                
+                <h4 id = "Portal_detail_heading">Details</h4>
+                <hr></hr>
+                <h6> <b>Name :</b> <t t-esc="user_id.partner_id.name " /> </h6>
+                <h6> <b>Company :</b> <t t-esc="user_id.partner_id.company_name" /> </h6>
+                <h6> <b>Email :</b> <t t-esc="user_id.partner_id.email " /> </h6>
+                <h6> <b>Phone :</b> <t t-esc="user_id.partner_id.phone " /> </h6>
+                <h6> <b>Tax-No :</b> <t t-esc="user_id.partner_id.vat " /> </h6>
+                <h6> <b>Address :</b> <t t-esc="user_id.partner_id.city " /> </h6>
+                <h6> <b>Addhar-No :</b> <t t-esc="user_id.partner_id.addhar_no " /> </h6>
+                <a href="/my/account" id ="Portal_detail_edit"> Edit</a>
+
+                </div>
+                
+
             </div>
         </xpath>
     </template>
@@ -16,12 +30,12 @@
             <div t-attf-class="form-group #{error.get('date_of_birth') and 'o_has_error' or ''} col-xl-6">
                 <label class="col-form-label" for="">Addhar No.</label>
                 <input type="text"
-                        name="addhar_no"
-                        pattern="^[2-9]{1}[0-9]{3}\s[0-9]{4}\s[0-9]{4}$"
-                        title="98xx 07xx x60x"
-                        placeholder="12 digit UIDAI number Ex.98xx 07xx x60x"
-                        t-attf-class="form-control #{error.get('addhar_no') and 'is-invalid' or ''}"
-                        t-att-value="addhar_no or partner.addhar_no"/>
+                    name="addhar_no"
+                    pattern="^[2-9]{1}[0-9]{3}\s[0-9]{4}\s[0-9]{4}$"
+                    title="98xx 07xx x60x"
+                    placeholder="12 digit UIDAI number Ex.98xx 07xx x60x"
+                    t-attf-class="form-control #{error.get('addhar_no') and 'is-invalid' or ''}"
+                    t-att-value="addhar_no or partner.addhar_no" />
             </div>
         </xpath>
     </template>
